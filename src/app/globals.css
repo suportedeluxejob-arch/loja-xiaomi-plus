@@ -24,20 +24,24 @@
 }
 
 :root {
-  /* Default to dark mode for the premium look */
-  --background: #09090b;
-  --foreground: #fafafa;
-}
+  :root {
+    /* Light mode for the premium look matching mockup */
+    --background: #f8f9fa;
+    /* Very light gray/white background */
+    --foreground: #09090b;
+    /* Dark text */
+  }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
-}
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
   }
 }

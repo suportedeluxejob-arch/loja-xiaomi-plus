@@ -19,7 +19,7 @@ export function FeatureItem({
             className={cn("flex flex-col items-center text-center gap-4", className)}
             {...props}
         >
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary text-primary shadow-inner">
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#fff0e6] text-[#ff6900] shadow-sm">
                 {icon}
             </div>
             <div>

@@ -19,7 +19,7 @@ export function CategoryCard({
     return (
         <Link
             href={href}
-            className="group relative flex h-[300px] w-full flex-col justify-end overflow-hidden rounded-3xl bg-secondary transition-all hover:shadow-2xl hover:-translate-y-1"
+            className="group relative flex h-[300px] w-full flex-col justify-end overflow-hidden rounded-3xl bg-gray-50 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 transition-all hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1"
         >
             <div
                 className={`absolute inset-0 ${imageFallback}`}

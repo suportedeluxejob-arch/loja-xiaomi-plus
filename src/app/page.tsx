@@ -1,3 +1,4 @@
+import { HeroBanners } from "@/components/layout/HeroBanners";
 import { PrimaryCTAButton } from "@/components/ui/PrimaryCTAButton";
 import { SecondaryCTAButton } from "@/components/ui/SecondaryCTAButton";
 import { SectionContainer } from "@/components/layout/SectionContainer";
@@ -21,50 +22,10 @@ export default function Home() {
     <>
       <LocalBusinessSchema />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24">
-        <div className="absolute inset-0 z-0 bg-background/95">
-          <div className="absolute inset-x-0 top-0 h-[500px] w-full bg-gradient-to-b from-primary/10 to-transparent opacity-50 blur-3xl" />
-        </div>
-
-        <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-          <ReviewBadge />
-
-          <h1 className="mt-8 max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Os melhores smartphones Xiaomi, Realme e Apple corporativos em Santa Cruz
-          </h1>
-
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl md:leading-relaxed text-balance">
-            Aparelhos originais, lacrados, com garantia e atendimento de confiança. O seu novo smartphone está aqui na Xiaomi Plus.
-          </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <PrimaryCTAButton
-              asChild
-              className="w-full sm:w-auto"
-            >
-              <a
-                href="https://wa.me/5521979544879?text=Olá,%20vim%20pelo%20site%20da%20Xiaomi%20Plus"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Falar no WhatsApp
-              </a>
-            </PrimaryCTAButton>
-
-            <SecondaryCTAButton
-              asChild
-              className="w-full sm:w-auto"
-              icon={<MapPin className="h-5 w-5" />}
-            >
-              <a href="#localizacao">Ver localização da loja</a>
-            </SecondaryCTAButton>
-          </div>
-        </div>
-      </section>
+      <HeroBanners />
 
       {/* Social Proof / Trust Section */}
-      <SectionContainer className="bg-secondary/20">
+      <SectionContainer className="bg-white">
         <SectionHeading
           title="Por que comprar na Xiaomi Plus?"
           subtitle="Mais de 1.000 clientes satisfeitos em Santa Cruz e região confiam em nosso trabalho."
@@ -112,7 +73,7 @@ export default function Home() {
       </SectionContainer>
 
       {/* Product Categories */}
-      <SectionContainer>
+      <SectionContainer className="bg-[#f8f9fa]">
         <SectionHeading
           title="Nossas Linhas"
           subtitle="Explore nosso catálogo completo por categoria"
@@ -146,7 +107,7 @@ export default function Home() {
       </SectionContainer>
 
       {/* Featured Products */}
-      <SectionContainer className="bg-secondary/10">
+      <SectionContainer className="bg-white">
         <SectionHeading
           title="Modelos em Destaque"
           subtitle="Os smartphones mais buscados e vendidos da semana"
@@ -169,7 +130,7 @@ export default function Home() {
       </SectionContainer>
 
       {/* Store Location */}
-      <SectionContainer id="localizacao">
+      <SectionContainer id="localizacao" className="bg-[#f8f9fa]">
         <SectionHeading
           title="Visite nossa Loja Física"
           subtitle="Segurança e comodidade para você no centro de Santa Cruz."

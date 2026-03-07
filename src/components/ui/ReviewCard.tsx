@@ -20,7 +20,7 @@ export function ReviewCard({
     return (
         <div
             className={cn(
-                "flex flex-col gap-4 rounded-2xl border border-white/10 bg-secondary/30 p-6 shadow-sm transition-colors hover:bg-secondary/50",
+                "flex flex-col gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)]",
                 className
             )}
             {...props}
