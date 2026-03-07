@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
-import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 
 interface ProductCardProps {
@@ -26,55 +24,44 @@ export function ProductCard({
     imageFallback,
     className,
 }: ProductCardProps) {
+    // Dynamic soft backgrounds based on device
+    let imageBg = "from-[#f8f9fb] to-[#f0f3f8]";
+    if (title.toLowerCase().includes("poco")) imageBg = "from-[#fdfcf6] to-[#f4ead2]";
+    else if (title.toLowerCase().includes("iphone")) imageBg = "from-[#f8f9fd] to-[#e4e7f3]";
+    else if (title.toLowerCase().includes("redmi note 11")) imageBg = "from-[#f4f6f9] to-[#dfe3ea]";
+    else if (brand.toLowerCase().includes("xiaomi")) imageBg = "from-[#fffcf9] to-[#fcecd7]";
+
     return (
         <div
             className={cn(
-                "group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all hover:border-[#ff6900]/30 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1",
+                "group flex h-full flex-col overflow-hidden rounded-[1.3rem] border border-gray-100/80 bg-white shadow-[0_2px_15px_-5px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-0.5",
                 className
             )}
         >
-            <Link href={`/produtos/${slug}`} className="relative block aspect-[4/5] w-full overflow-hidden bg-gray-50 p-6 flex items-center justify-center">
-                {/* Placeholder image representation */}
-                <div className={`h-[85%] w-[85%] rounded-xl transition-transform duration-500 group-hover:scale-110 shadow-lg ${imageFallback}`} />
-
-                <div className="absolute top-4 left-4 rounded-full bg-background/80 px-2.5 py-1 text-xs font-semibold backdrop-blur-md">
-                    {brand}
+            <Link href={`/ produtos / ${slug} `} className="p-2 pb-0 block shrink-0">
+                <div className={cn("relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-[1rem] bg-gradient-to-br", imageBg)}>
+                    {/* Placeholder image representation */}
+                    <div className={`relative z - 10 h - [80 %] w - [65 %] rounded - lg transition - transform duration - 500 group - hover: scale - 105 shadow - md ${imageFallback} `} />
                 </div>
             </Link>
 
-            <div className="flex flex-1 flex-col p-5">
-                <Link href={`/produtos/${slug}`} className="focus-visible:outline-none">
-                    <h3 className="text-xl font-bold text-gray-900 leading-tight group-hover:text-[#ff6900] transition-colors line-clamp-2 mb-2">
+            <div className="flex flex-1 flex-col p-4 pt-4">
+                <Link href={`/ produtos / ${slug} `} className="focus-visible:outline-none flex-1 flex flex-col">
+                    <h3 className="text-[13px] font-bold text-gray-900 leading-[1.3] group-hover:text-[#ff6900] transition-colors line-clamp-2 mb-2 pr-1">
                         {title}
                     </h3>
+                    <p className="text-[10px] font-medium text-gray-400 line-clamp-2 leading-relaxed pr-2">
+                        {shortDescription}
+                    </p>
                 </Link>
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-4 flex-1">
-                    {shortDescription}
-                </p>
 
-                <div className="flex items-end justify-between gap-4 mt-auto">
-                    {price ? (
-                        <div className="flex flex-col">
-                            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-gray-500">A partir de</span>
-                            <span className="text-lg sm:text-xl font-black text-[#ff6900] tracking-tight">
-                                {new Intl.NumberFormat("pt-BR", {
-                                    style: "currency",
-                                    currency: "BRL",
-                                }).format(price)}
-                            </span>
-                        </div>
-                    ) : (
-                        <div className="text-sm font-medium text-muted-foreground">
-                            Sob consulta
-                        </div>
-                    )}
-
-                    <Button variant="primary" size="sm" asChild className="shrink-0 gap-2 font-bold w-full sm:w-auto">
-                        <a href={`https://wa.me/5521979544879?text=Olá,%20tenho%20interesse%20no%20${encodeURIComponent(title)}.%20Pode%20me%20passar%20mais%20informações?`} target="_blank" rel="noreferrer">
-                            <MessageCircle className="h-4 w-4" />
-                            <span className="hidden sm:inline">Perguntar</span>
-                        </a>
-                    </Button>
+                <div className="mt-4 pt-1 pb-1">
+                    <span className="text-[18px] sm:text-[20px] font-black text-[#ff6900] tracking-tight leading-none">
+                        {price ? new Intl.NumberFormat("pt-BR", {
+                            style: "currency",
+                            currency: "BRL",
+                        }).format(price) : "Sob Consulta"}
+                    </span>
                 </div>
             </div>
         </div>

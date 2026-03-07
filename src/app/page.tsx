@@ -7,7 +7,7 @@ import { ReviewBadge } from "@/components/ui/ReviewBadge";
 import { ReviewCard } from "@/components/ui/ReviewCard";
 import { CategoryCard } from "@/components/ui/CategoryCard";
 import { ProductCard } from "@/components/ui/ProductCard";
-import { StoreInfoBlock } from "@/components/ui/StoreInfoBlock";
+import { StoreLocationSection } from "@/components/ui/StoreLocationSection";
 import { FeatureItem } from "@/components/ui/FeatureItem";
 import { FinalCTASection } from "@/components/ui/FinalCTASection";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
@@ -55,18 +55,21 @@ export default function Home() {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <ReviewCard
-            author="Carlos Silva"
+            author="Paulo Chaves"
             date="Há 2 semanas"
+            imageSrc="/paulo-chaves.png"
             text="Atendimento excepcional! Comprei um POCO X6 Pro, me ajudaram a passar todos os dados do aparelho antigo para o novo. Loja muito confiável."
           />
           <ReviewCard
-            author="Ana Beatriz"
+            author="Amanda Lira"
             date="Há 1 mês"
+            imageSrc="/amanda-lira.png"
             text="Preço justo e produtos originais embalados. Recomendo muito a Xiaomi Plus para quem mora em Santa Cruz."
           />
           <ReviewCard
-            author="Marcos Antônio"
+            author="Marcos Vinicius"
             date="Há 2 meses"
+            imageSrc="/marcos-vinicius.png"
             text="Comprei um iPhone 13 com eles. Negociação transparente do início ao fim via WhatsApp e retirei na loja física."
           />
         </div>
@@ -130,33 +133,7 @@ export default function Home() {
       </SectionContainer>
 
       {/* Store Location */}
-      <SectionContainer id="localizacao" className="bg-[#f8f9fa]">
-        <SectionHeading
-          title="Visite nossa Loja Física"
-          subtitle="Segurança e comodidade para você no centro de Santa Cruz."
-        />
-        <div className="mb-10">
-          <StoreInfoBlock />
-        </div>
-
-        <div className="relative h-[400px] w-full overflow-hidden rounded-3xl border border-white/10 bg-secondary/50">
-          {/* Replace with actual Google Maps Embed Iframe */}
-          <div className="absolute inset-0 flex items-center justify-center bg-secondary/80 mix-blend-overlay">
-            <span className="text-muted-foreground font-mono">Google Maps Embed Placeholder</span>
-          </div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3674.341499596001!2d-43.6826!3d-22.9168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU1JzAwLjUiUyA0M8KwNDAnNTcuNCJX!5e0!3m2!1spt-BR!2sbr!4v1610000000000!5m2!1spt-BR!2sbr"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={false}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Maps Location"
-            className="relative z-10 w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-          ></iframe>
-        </div>
-      </SectionContainer>
+      <StoreLocationSection />
 
       <FinalCTASection />
     </>

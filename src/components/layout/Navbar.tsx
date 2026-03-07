@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Smartphone, Search, User, ShoppingCart } from "lucide-react";
 import { Button } from "../ui/Button";
 
@@ -20,10 +21,11 @@ export function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white shadow-sm font-sans flex flex-col">
             {/* Row 1: Top Thin Promo Banner */}
-            <div className="w-full bg-[#ff6900] text-white py-1">
-                <div className="container mx-auto px-4 flex justify-between items-center text-[10px] sm:text-xs">
-                    <span className="font-bold tracking-wider">PRODUTOS ORIGINAIS VERSÃO GLOBAL</span>
-                    <span className="font-medium opacity-90 hidden sm:inline-block">ENVIO IMEDIATO PARA TODO O BRASIL</span>
+            <div className="w-full bg-[#ff6900] text-white py-1.5 flex items-center justify-center shadow-[inset_0_-1px_0_rgba(0,0,0,0.1)]">
+                <div className="container mx-auto px-4 flex justify-center items-center text-[10px] sm:text-xs">
+                    <span className="font-bold tracking-widest text-center uppercase text-white/95">
+                        Aparelhos Xiaomi com 18 meses de garantia, a <span className="text-white font-black underline decoration-white/40 underline-offset-2">maior garantia do Brasil</span> para Xiaomi
+                    </span>
                 </div>
             </div>
 
@@ -31,9 +33,14 @@ export function Navbar() {
             <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
                 {/* Logo Section */}
                 <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
-                    <div className="bg-[#ff6900] p-2 rounded-xl flex items-center justify-center shadow-sm">
-                        <span className="font-black text-xl text-white tracking-tighter leading-none">XP</span>
-                    </div>
+                    <Image
+                        src="/xiaomi-plus-logo.png"
+                        alt="Xiaomi Plus Logo"
+                        width={44}
+                        height={44}
+                        className="rounded-full shadow-sm drop-shadow-sm"
+                        priority
+                    />
                     <span className="font-extrabold text-xl md:text-2xl tracking-tight text-gray-900">
                         XIAOMI PLUS <span className="font-light text-gray-500 hidden sm:inline-block">LOJA ONLINE</span>
                     </span>
