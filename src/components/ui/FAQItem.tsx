@@ -15,7 +15,7 @@ export function FAQItem({ question, answer }: FAQItemProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="border-b border-white/10 last:border-0">
+        <div className="border-b border-gray-100 last:border-0">
             <button
                 type="button"
                 className="flex w-full items-center justify-between py-5 text-left transition-colors hover:text-primary focus:outline-none"

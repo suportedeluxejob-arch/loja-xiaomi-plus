@@ -38,7 +38,7 @@ export function ProductCard({
                 className
             )}
         >
-            <Link href={`/ produtos / ${slug} `} className="p-2 pb-0 block shrink-0">
+            <Link href={`/produtos/${slug}`} className="p-2 pb-0 block shrink-0">
                 <div className={cn("relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-[1rem] bg-gradient-to-br", imageBg)}>
                     {/* Placeholder image representation */}
                     <div className={`relative z - 10 h - [80 %] w - [65 %] rounded - lg transition - transform duration - 500 group - hover: scale - 105 shadow - md ${imageFallback} `} />
@@ -46,7 +46,7 @@ export function ProductCard({
             </Link>
 
             <div className="flex flex-1 flex-col p-4 pt-4">
-                <Link href={`/ produtos / ${slug} `} className="focus-visible:outline-none flex-1 flex flex-col">
+                <Link href={`/produtos/${slug}`} className="focus-visible:outline-none flex-1 flex flex-col">
                     <h3 className="text-[13px] font-bold text-gray-900 leading-[1.3] group-hover:text-[#ff6900] transition-colors line-clamp-2 mb-2 pr-1">
                         {title}
                     </h3>

@@ -27,7 +27,7 @@ export function ContactForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="flex w-full flex-col gap-5 rounded-2xl bg-secondary/30 p-6 md:p-8"
+            className="flex w-full flex-col gap-5 rounded-2xl bg-white border border-gray-100 shadow-sm p-6 md:p-8"
         >
             <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-sm font-medium">
@@ -40,7 +40,7 @@ export function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="rounded-lg border border-white/10 bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
                     placeholder="Seu nome"
                 />
             </div>
@@ -56,7 +56,7 @@ export function ContactForm() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="rounded-lg border border-white/10 bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
                     placeholder="(21) 90000-0000"
                 />
             </div>
@@ -72,7 +72,7 @@ export function ContactForm() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="resize-none rounded-lg border border-white/10 bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="resize-none rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
                     placeholder="Como podemos te ajudar?"
                 />
             </div>

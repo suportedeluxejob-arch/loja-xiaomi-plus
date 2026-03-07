@@ -31,7 +31,7 @@ export default async function ProductsPage({
     const categories = ["Todos", "Xiaomi", "Apple", "Realme", "Acessórios"];
 
     return (
-        <SectionContainer className="pt-8 bg-secondary/10 min-h-[80vh]">
+        <SectionContainer className="pt-8 bg-[#f8f9fa] min-h-[80vh]">
             <Breadcrumb
                 items={[
                     { name: "Produtos", href: "/produtos" },
@@ -42,7 +42,7 @@ export default async function ProductsPage({
             <div className="flex flex-col md:flex-row gap-8 mt-6">
                 {/* Sidebar Filters */}
                 <aside className="w-full md:w-64 shrink-0">
-                    <div className="sticky top-24 rounded-2xl border border-white/10 bg-secondary/50 p-6">
+                    <div className="sticky top-24 rounded-2xl border border-gray-100 bg-white shadow-sm p-6">
                         <div className="flex items-center gap-2 mb-6 text-lg font-bold">
                             <Filter className="h-5 w-5 text-primary" />
                             Categorias
@@ -58,8 +58,8 @@ export default async function ProductsPage({
                                         <a
                                             href={cat === "Todos" ? "/produtos" : `/produtos?categoria=${cat}`}
                                             className={`block px-3 py-2 rounded-lg text-sm transition-colors ${isActive
-                                                ? "bg-primary text-primary-foreground font-medium"
-                                                : "text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                                                ? "bg-[#ff6900] text-white font-medium shadow-sm"
+                                                : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
                                                 }`}
                                         >
                                             {cat}
@@ -97,8 +97,8 @@ export default async function ProductsPage({
                             ))}
                         </div>
                     ) : (
-                        <div className="flex flex-col items-center justify-center p-12 text-center rounded-2xl bg-secondary/30 border border-white/5">
-                            <p className="text-xl font-medium text-muted-foreground">Nenhum produto encontrado nesta categoria.</p>
+                        <div className="flex flex-col items-center justify-center p-12 text-center rounded-2xl bg-white border border-gray-100 shadow-sm">
+                            <p className="text-xl font-medium text-gray-500">Nenhum produto encontrado nesta categoria.</p>
                         </div>
                     )}
                 </div>

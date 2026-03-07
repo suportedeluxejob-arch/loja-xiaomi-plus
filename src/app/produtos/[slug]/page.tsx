@@ -71,9 +71,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                     {/* Product Image Gallery (Mock) */}
                     <div className="flex flex-col gap-4">
-                        <div className={`aspect-square w-full rounded-3xl border border-white/10 ${product.images[0]} flex items-center justify-center`}>
+                        <div className={`aspect-square w-full rounded-3xl border border-gray-100 shadow-sm ${product.images[0]} flex items-center justify-center`}>
                             {/* Real implementations use next/image here */}
-                            <div className="bg-black/50 backdrop-blur text-white px-4 py-2 rounded-full font-mono text-sm shadow-xl">
+                            <div className="bg-white/80 backdrop-blur text-gray-900 px-4 py-2 rounded-full font-mono text-sm shadow-sm border border-gray-200">
                                 Image Placeholder: {product.model}
                             </div>
                         </div>
@@ -81,7 +81,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                         <div className="grid grid-cols-4 gap-4">
                             {/* Thumbnails mockup */}
                             {[1, 2, 3, 4].map((i) => (
-                                <div key={i} className={`aspect-square rounded-xl border border-white/20 opacity-50 hover:opacity-100 transition-opacity cursor-pointer ${product.images[0]}`} />
+                                <div key={i} className={`aspect-square rounded-xl border border-gray-200 opacity-50 hover:opacity-100 hover:border-[#ff6900] transition-all cursor-pointer ${product.images[0]}`} />
                             ))}
                         </div>
                     </div>
@@ -98,11 +98,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
                         <ReviewBadge />
 
-                        <div className="my-8 h-px w-full bg-white/10" />
+                        <div className="my-8 h-px w-full bg-gray-100" />
 
                         {product.price && (
                             <div className="mb-8">
-                                <p className="text-sm font-medium text-muted-foreground mb-1">Preço Promocional a partir de</p>
+                                <p className="text-sm font-medium text-gray-500 mb-1">Preço Promocional a partir de</p>
                                 <p className="text-4xl font-bold text-primary">
                                     {new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(product.price)}
                                 </p>
@@ -110,7 +110,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                             </div>
                         )}
 
-                        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                        <p className="text-lg text-gray-500 leading-relaxed mb-8">
                             {product.fullDescription}
                         </p>
 
@@ -118,32 +118,32 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                         <ul className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
                             {(product.storage || product.color) && (
                                 <li className="flex items-center gap-3">
-                                    <div className="bg-secondary p-2 rounded-lg text-primary"><Smartphone className="w-5 h-5" /></div>
+                                    <div className="bg-[#ff6900]/10 p-2 rounded-lg text-[#ff6900]"><Smartphone className="w-5 h-5" /></div>
                                     <div className="text-sm">
-                                        <span className="block text-muted-foreground">Configuração</span>
-                                        <span className="font-semibold">{product.storage} {product.color ? `• ${product.color}` : ''}</span>
+                                        <span className="block text-gray-500">Configuração</span>
+                                        <span className="font-semibold text-gray-900">{product.storage} {product.color ? `• ${product.color}` : ''}</span>
                                     </div>
                                 </li>
                             )}
                             <li className="flex items-center gap-3">
-                                <div className="bg-secondary p-2 rounded-lg text-primary"><ShieldCheck className="w-5 h-5" /></div>
+                                <div className="bg-[#ff6900]/10 p-2 rounded-lg text-[#ff6900]"><ShieldCheck className="w-5 h-5" /></div>
                                 <div className="text-sm">
-                                    <span className="block text-muted-foreground">Garantia</span>
-                                    <span className="font-semibold">{product.warranty}</span>
+                                    <span className="block text-gray-500">Garantia</span>
+                                    <span className="font-semibold text-gray-900">{product.warranty}</span>
                                 </div>
                             </li>
                             <li className="flex items-center gap-3">
-                                <div className="bg-secondary p-2 rounded-lg text-primary"><MapPin className="w-5 h-5" /></div>
+                                <div className="bg-[#ff6900]/10 p-2 rounded-lg text-[#ff6900]"><MapPin className="w-5 h-5" /></div>
                                 <div className="text-sm">
-                                    <span className="block text-muted-foreground">Retirada</span>
-                                    <span className="font-semibold">Na Loja Física</span>
+                                    <span className="block text-gray-500">Retirada</span>
+                                    <span className="font-semibold text-gray-900">Na Loja Física</span>
                                 </div>
                             </li>
                             <li className="flex items-center gap-3">
-                                <div className="bg-secondary p-2 rounded-lg text-primary"><Truck className="w-5 h-5" /></div>
+                                <div className="bg-[#ff6900]/10 p-2 rounded-lg text-[#ff6900]"><Truck className="w-5 h-5" /></div>
                                 <div className="text-sm">
-                                    <span className="block text-muted-foreground">Entrega</span>
-                                    <span className="font-semibold">Na Região (Taxa a consultar)</span>
+                                    <span className="block text-gray-500">Entrega</span>
+                                    <span className="font-semibold text-gray-900">Na Região (Taxa a consultar)</span>
                                 </div>
                             </li>
                         </ul>
@@ -163,7 +163,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 </div>
             </SectionContainer>
 
-            <SectionContainer className="bg-secondary/10">
+            <SectionContainer className="bg-gray-50">
                 <StoreInfoBlock />
             </SectionContainer>
 
