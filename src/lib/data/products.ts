@@ -1,0 +1,134 @@
+import { Product, ProductCategory } from "@/types";
+
+export const mockProducts: Product[] = [
+    {
+        id: "prod-001",
+        slug: "xiaomi-redmi-note-13-pro-5g",
+        brand: "Xiaomi",
+        model: "Redmi Note 13 Pro 5G",
+        title: "Xiaomi Redmi Note 13 Pro 5G 256GB / 8GB RAM",
+        category: "Xiaomi",
+        shortDescription: "Câmera de 200MP com OIS, tela AMOLED 1.5K de 120Hz e carregamento turbo de 67W.",
+        fullDescription: "O Redmi Note 13 Pro 5G revoluciona a fotografia na categoria com seu poderoso sensor de 200MP. O design premium acompanha uma tela AMOLED de cristalino com 120Hz e Snapdragon 7s Gen 2, oferecendo performance impecável para jogos pesados e multitarefas.",
+        storage: "256GB",
+        color: "Midnight Black",
+        condition: "Novo e Lacrado",
+        warranty: "3 meses",
+        price: 1899.00,
+        featured: true,
+        status: "available",
+        images: ["bg-gradient-to-tr from-gray-900 to-gray-800"], // Fallback
+        seoTitle: "Comprar Xiaomi Redmi Note 13 Pro 5G | Xiaomi Plus Santa Cruz",
+        seoDescription: "Xiaomi Redmi Note 13 Pro 5G novo e lacrado. O melhor preço em Santa Cruz - RJ. Pronta entrega na Xiaomi Plus.",
+    },
+    {
+        id: "prod-002",
+        slug: "poco-x6-pro-5g",
+        brand: "Xiaomi",
+        model: "POCO X6 Pro 5G",
+        title: "POCO X6 Pro 5G 512GB / 12GB RAM",
+        category: "Xiaomi",
+        shortDescription: "O mais poderoso da linha POCO com o novo Dimensity 8300-Ultra e HyperOS.",
+        fullDescription: "Projetado para os gamers mais exigentes, o POCO X6 Pro entrega uma performance astronômica. Equipado com refrigeração líquida, tela AMOLED 120Hz para respostas ultrarrápidas e carregamento de 67W. A máquina definitiva de bolso.",
+        storage: "512GB",
+        color: "POCO Yellow",
+        condition: "Novo e Lacrado",
+        warranty: "3 meses",
+        price: 2499.00,
+        featured: true,
+        status: "available",
+        images: ["bg-gradient-to-tr from-yellow-500 to-yellow-600"], // Fallback
+        seoTitle: "POCO X6 Pro 5G 512GB Original | Loja em Santa Cruz",
+        seoDescription: "Poco X6 Pro 512GB novo, original e lacrado. A melhor loja da região de Santa Cruz. Entrega rápida.",
+    },
+    {
+        id: "prod-003",
+        slug: "apple-iphone-13",
+        brand: "Apple",
+        model: "iPhone 13",
+        title: "Apple iPhone 13 128GB",
+        category: "Apple",
+        shortDescription: "Sistema avançado de câmera dupla e chip A15 Bionic para um desempenho estrondoso.",
+        fullDescription: "O iPhone 13 traz grandes atualizações na câmera e na bateria. Gravação em HDR Dolby Vision, modo cinema e o poderoso Chip A15 Bionic com 5G ultrarrápido. Aparelho premium para quem busca o ecossistema Apple com o melhor custo-benefício atual.",
+        storage: "128GB",
+        color: "Midnight",
+        condition: "Novo e Lacrado",
+        warranty: "1 ano Apple",
+        price: 3899.00,
+        featured: true,
+        status: "available",
+        images: ["bg-gradient-to-tr from-slate-800 to-slate-900"], // Fallback
+        seoTitle: "Comprar iPhone 13 128GB Original | Xiaomi Plus",
+        seoDescription: "iPhone 13 128GB novo e lacrado com garantia de 1 ano. Preço baixo em Santa Cruz RJ.",
+    },
+    {
+        id: "prod-004",
+        slug: "apple-iphone-15-pro-max",
+        brand: "Apple",
+        model: "iPhone 15 Pro Max",
+        title: "Apple iPhone 15 Pro Max 256GB Titânio Natural",
+        category: "Apple",
+        shortDescription: "O primeiro iPhone com design em titânio aeroespacial. Mais leve e mais forte.",
+        fullDescription: "O iPhone 15 Pro Max traz o design revolucionário em titânio aeroespacial, mais leve, mais resistente. Inclui o inovador botão de Ação, entrada USB-C veloz e o sistema de câmera Pro mais avançado da Apple com zoom óptico de 5x.",
+        storage: "256GB",
+        color: "Titânio Natural",
+        condition: "Novo e Lacrado",
+        warranty: "1 ano Apple",
+        price: 7599.00,
+        featured: false,
+        status: "available",
+        images: ["bg-gradient-to-tr from-stone-400 to-stone-500"], // Fallback
+        seoTitle: "iPhone 15 Pro Max Titânio | Xiaomi Plus Santa Cruz",
+        seoDescription: "iPhone 15 Pro Max Original Apple. Compre o seu na loja física Xiaomi Plus em Santa Cruz - RJ.",
+    },
+    {
+        id: "prod-005",
+        slug: "realme-12-pro-plus",
+        brand: "Realme",
+        model: "Realme 12 Pro+",
+        title: "Realme 12 Pro+ 5G 512GB / 12GB RAM Luxury Watch Design",
+        category: "Realme",
+        shortDescription: "Design premium inspirado em relógios de luxo com lente periscópica 3X.",
+        fullDescription: "O Realme 12 Pro+ eleva a fotografia móvel com um sistema de câmeras Sony co-projetado com a Ollivier Savéo (design de relógios de luxo). A lente telefoto periscópica e a tela AMOLED curva de 120Hz entregam a experiência flagship por um preço imbatível.",
+        storage: "512GB",
+        color: "Submarine Blue",
+        condition: "Novo e Lacrado",
+        warranty: "3 meses",
+        price: 2899.00,
+        featured: true,
+        status: "available",
+        images: ["bg-gradient-to-tr from-blue-800 to-blue-900"], // Fallback
+        seoTitle: "Realme 12 Pro+ 512GB | Loja Realme Santa Cruz",
+        seoDescription: "Realme 12 Pro Plus 512GB 12GB RAM. Câmera Periscópica. Compre com segurança na Xiaomi Plus.",
+    },
+    {
+        id: "prod-006",
+        slug: "amazfit-gts-4-mini",
+        brand: "Diversos",
+        model: "Amazfit GTS 4 Mini",
+        title: "Smartwatch Amazfit GTS 4 Mini",
+        category: "Acessórios",
+        shortDescription: "Um smartwatch compacto, poderoso e com monitoramento avançado de saúde e exercícios.",
+        fullDescription: "O Amazfit GTS 4 Mini tem uma bateria ultralonga de até 15 dias, 120 modos esportivos, monitoramento 24h de frequência cardíaca, SpO2 e stress. Resistente à água até 5 ATM, perfeito para qualquer modalidade.",
+        condition: "Novo e Lacrado",
+        warranty: "3 meses",
+        price: 499.00,
+        featured: false,
+        status: "available",
+        images: ["bg-gradient-to-tr from-zinc-700 to-zinc-800"], // Fallback
+        seoTitle: "Smartwatch Amazfit GTS 4 Mini | Acessórios Xiaomi Plus",
+        seoDescription: "Smartwatch Amazfit GTS 4 Mini Original. Perfeito para seu treino. Acesse e compre agora.",
+    }
+];
+
+export function getFeaturedProducts(limit: number = 4): Product[] {
+    return mockProducts.filter((p) => p.featured).slice(0, limit);
+}
+
+export function getProductsByCategory(category: ProductCategory): Product[] {
+    return mockProducts.filter((p) => p.category === category);
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+    return mockProducts.find((p) => p.slug === slug);
+}
