@@ -118,9 +118,28 @@ export const mockProducts: Product[] = [
         images: ["bg-gradient-to-tr from-zinc-700 to-zinc-800"], // Fallback
         seoTitle: "Smartwatch Amazfit GTS 4 Mini | Acessórios Xiaomi Plus",
         seoDescription: "Smartwatch Amazfit GTS 4 Mini Original. Perfeito para seu treino. Acesse e compre agora.",
+    },
+    {
+        id: "prod-007",
+        slug: "redmi-note-15-pro-5g",
+        brand: "Xiaomi",
+        model: "Redmi Note 15 Pro",
+        title: "Xiaomi Redmi Note 15 Pro 5G 256GB / 8GB RAM",
+        category: "Xiaomi",
+        shortDescription: "Processador Dimensity 7400 Ultra, super bateria de 7000 mAh e câmera Sony de 50MP com OIS.",
+        fullDescription: "O Redmi Note 15 Pro 5G redefine a durabilidade com uma impressionante bateria de 7000 mAh e resistência IP68/IP69K contra água e poeira. Acompanhado pelo eficiente chipset Dimensity 7400 Ultra de 4nm e uma fluída tela AMOLED 1.5K de 120Hz, ele garante alto desempenho para qualquer desafio do dia a dia. Desfrute também de imagens cristalinas com o avançado sensor principal Sony de 50MP com estabilização óptica.",
+        storage: "256GB",
+        color: "Titanium Black",
+        condition: "Novo e Lacrado",
+        warranty: "3 meses",
+        price: 2599.00,
+        featured: true,
+        status: "available",
+        images: ["/redmi-note-15-pro-5g.png"],
+        seoTitle: "Comprar Xiaomi Redmi Note 15 Pro 5G | Xiaomi Plus Santa Cruz",
+        seoDescription: "Xiaomi Redmi Note 15 Pro 5G novo e lacrado. Super bateria 7000mAh e câmera Sony de 50MP. O melhor preço em Santa Cruz - RJ. Pronta entrega.",
     }
 ];
-
 export function getFeaturedProducts(limit: number = 4): Product[] {
     return mockProducts.filter((p) => p.featured).slice(0, limit);
 }

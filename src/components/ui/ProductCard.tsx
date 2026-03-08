@@ -40,8 +40,12 @@ export function ProductCard({
         >
             <Link href={`/produtos/${slug}`} className="p-2 pb-0 block shrink-0">
                 <div className={cn("relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-[1rem] bg-gradient-to-br", imageBg)}>
-                    {/* Placeholder image representation */}
-                    <div className={`relative z - 10 h - [80 %] w - [65 %] rounded - lg transition - transform duration - 500 group - hover: scale - 105 shadow - md ${imageFallback} `} />
+                    {/* Representação da imagem real ou placeholder CSS */}
+                    {imageFallback.startsWith('/') ? (
+                        <Image src={imageFallback} alt={title || "Produto"} fill className="object-cover relative z-10 transition-transform duration-500 group-hover:scale-105" />
+                    ) : (
+                        <div className={`relative z-10 h-[80%] w-[65%] rounded-lg transition-transform duration-500 group-hover:scale-105 shadow-md ${imageFallback}`} />
+                    )}
                 </div>
             </Link>
 
