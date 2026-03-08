@@ -1,29 +1,27 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Product } from "@/types";
+import { useCart } from "@/contexts/CartContext";
+import { Button } from "./Button";
+import { ShoppingCart } from "lucide-react";
 
 interface ProductCardProps {
-    id: string;
-    slug: string;
-    brand: string;
-    title: string;
-    model: string;
-    shortDescription: string;
-    price?: number;
-    imageFallback: string; // Temporary since no external images
+    product: Product;
     className?: string;
 }
 
 export function ProductCard({
-    slug,
-    brand,
-    title,
-    shortDescription,
-    price,
-    imageFallback,
+    product,
     className,
 }: ProductCardProps) {
+    const { slug, brand, title, shortDescription, images } = product;
+    const imageFallback = images[0];
+    const { addToCart } = useCart();
+
     // Dynamic soft backgrounds based on device
     let imageBg = "from-[#f8f9fb] to-[#f0f3f8]";
     if (title.toLowerCase().includes("poco")) imageBg = "from-[#fdfcf6] to-[#f4ead2]";
@@ -51,21 +49,23 @@ export function ProductCard({
 
             <div className="flex flex-1 flex-col p-4 pt-4">
                 <Link href={`/produtos/${slug}`} className="focus-visible:outline-none flex-1 flex flex-col">
-                    <h3 className="text-[13px] font-bold text-gray-900 leading-[1.3] group-hover:text-[#ff6900] transition-colors line-clamp-2 mb-2 pr-1">
+                    <h3 className="text-[14px] font-bold text-gray-900 leading-[1.3] group-hover:text-[#ff6900] transition-colors line-clamp-2 mb-2 pr-1">
                         {title}
                     </h3>
-                    <p className="text-[10px] font-medium text-gray-400 line-clamp-2 leading-relaxed pr-2">
+                    <p className="text-[11px] font-medium text-gray-400 line-clamp-2 leading-relaxed pr-2">
                         {shortDescription}
                     </p>
                 </Link>
 
-                <div className="mt-4 pt-1 pb-1">
-                    <span className="text-[18px] sm:text-[20px] font-black text-[#ff6900] tracking-tight leading-none">
-                        {price ? new Intl.NumberFormat("pt-BR", {
-                            style: "currency",
-                            currency: "BRL",
-                        }).format(price) : "Sob Consulta"}
-                    </span>
+                <div className="mt-4 pt-1">
+                    <Button
+                        variant="primary"
+                        className="w-full text-xs font-bold py-2 gap-2"
+                        onClick={() => addToCart(product)}
+                    >
+                        <ShoppingCart className="w-4 h-4" />
+                        Adicionar ao Carrinho
+                    </Button>
                 </div>
             </div>
         </div>

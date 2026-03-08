@@ -4,6 +4,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsAppButton } from "@/components/ui/FloatingWhatsAppButton";
 import { MobileStickyActions } from "@/components/ui/MobileStickyActions";
+import { CartDrawer } from "@/components/ui/CartDrawer";
+import { CartProvider } from "@/contexts/CartContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,13 +26,16 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.variable} antialiased dark min-h-screen flex flex-col`}>
-        <Navbar />
-        <main className="flex-1 flex flex-col pt-16 md:pt-0">
-          {children}
-        </main>
-        <Footer />
-        <FloatingWhatsAppButton />
-        <MobileStickyActions />
+        <CartProvider>
+          <Navbar />
+          <CartDrawer />
+          <main className="flex-1 flex flex-col pt-16 md:pt-0">
+            {children}
+          </main>
+          <Footer />
+          <FloatingWhatsAppButton />
+          <MobileStickyActions />
+        </CartProvider>
       </body>
     </html>
   );

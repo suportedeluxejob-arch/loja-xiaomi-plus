@@ -9,6 +9,7 @@ import { SecondaryCTAButton } from "@/components/ui/SecondaryCTAButton";
 import { ReviewBadge } from "@/components/ui/ReviewBadge";
 import { StoreInfoBlock } from "@/components/ui/StoreInfoBlock";
 import { ProductCard } from "@/components/ui/ProductCard";
+import { AddToCartButton } from "@/components/ui/AddToCartButton";
 import { ProductSchema } from "@/components/seo/ProductSchema";
 import { FinalCTASection } from "@/components/ui/FinalCTASection";
 import { getProductBySlug, getProductsByCategory } from "@/lib/data/products";
@@ -100,6 +101,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
                         <div className="my-8 h-px w-full bg-gray-100" />
 
+                        {/* Preço removido para forçar conversão via WhatsApp 
                         {product.price && (
                             <div className="mb-8">
                                 <p className="text-sm font-medium text-gray-500 mb-1">Preço Promocional a partir de</p>
@@ -109,6 +111,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                                 <p className="text-sm text-green-500 font-medium mt-1 inline-flex items-center gap-1"><CheckCircle2 className="w-4 h-4" /> Em Estoque</p>
                             </div>
                         )}
+                        */}
 
                         <p className="text-lg text-gray-500 leading-relaxed mb-8">
                             {product.fullDescription}
@@ -149,15 +152,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                         </ul>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                            <PrimaryCTAButton asChild className="w-full text-lg h-14" icon={false}>
-                                <a
-                                    href={`https://wa.me/5521979544879?text=Olá,%20tenho%20interesse%20no%20${encodeURIComponent(product.title)}.%20Qual%20a%20disponibilidade%20e%20condições%20de%20pagamento?`}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Comprar no WhatsApp
-                                </a>
-                            </PrimaryCTAButton>
+                            <AddToCartButton product={product} />
                         </div>
                     </div>
                 </div>
@@ -180,14 +175,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                         {relatedProducts.map((p) => (
                             <ProductCard
                                 key={p.id}
-                                id={p.id}
-                                slug={p.slug}
-                                brand={p.brand}
-                                title={p.title}
-                                model={p.model}
-                                shortDescription={p.shortDescription}
-                                price={p.price}
-                                imageFallback={p.images[0]}
+                                product={p}
                             />
                         ))}
                     </div>

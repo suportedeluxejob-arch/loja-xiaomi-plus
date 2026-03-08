@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Smartphone, Search, User, ShoppingCart } from "lucide-react";
 import { Button } from "../ui/Button";
+import { useCart } from "@/contexts/CartContext";
 
 const navLinks = [
     { name: "Lançamentos", href: "/produtos?categoria=lancamentos" },
@@ -15,6 +16,7 @@ const navLinks = [
 
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
+    const { cartCount, setIsCartOpen } = useCart();
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white shadow-sm font-sans flex flex-col">
@@ -52,10 +54,17 @@ export function Navbar() {
                     <button className="hover:text-[#ff6900] transition-colors hidden sm:block">
                         <User className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
-                    <a href="https://wa.me/5521979544879?text=Olá,%20vim%20pelo%20site%20da%20Xiaomi%20Plus" target="_blank" rel="noreferrer" className="relative hover:text-[#ff6900] transition-colors">
+                    <button
+                        onClick={() => setIsCartOpen(true)}
+                        className="relative hover:text-[#ff6900] transition-colors"
+                    >
                         <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
-                        <span className="absolute -top-1.5 -right-1.5 flex items-center justify-center bg-[#ff6900] text-white text-[10px] w-4 h-4 rounded-full font-bold">0</span>
-                    </a>
+                        {cartCount > 0 && (
+                            <span className="absolute -top-1.5 -right-1.5 flex items-center justify-center bg-[#ff6900] text-white text-[10px] w-4 h-4 rounded-full font-bold">
+                                {cartCount}
+                            </span>
+                        )}
+                    </button>
 
                     {/* Mobile Menu Toggle */}
                     <button

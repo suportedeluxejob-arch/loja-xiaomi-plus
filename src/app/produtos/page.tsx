@@ -85,14 +85,7 @@ export default async function ProductsPage({
                             {filteredProducts.map((product) => (
                                 <ProductCard
                                     key={product.id}
-                                    id={product.id}
-                                    slug={product.slug}
-                                    brand={product.brand}
-                                    title={product.title}
-                                    model={product.model}
-                                    shortDescription={product.shortDescription}
-                                    price={product.price}
-                                    imageFallback={product.images[0]}
+                                    product={product}
                                 />
                             ))}
                         </div>
