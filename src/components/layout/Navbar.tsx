@@ -8,11 +8,9 @@ import { Button } from "../ui/Button";
 
 const navLinks = [
     { name: "Lançamentos", href: "/produtos?categoria=lancamentos" },
-    { name: "Série X", href: "/produtos?categoria=seriex" },
-    { name: "Acessórios", href: "/produtos?categoria=acessorios" },
-    { name: "Preços de atacado", href: "/produtos?categoria=atacado" },
-    { name: "Procon", href: "/procon" },
-    { name: "Dúvidas ou ameaças", href: "/faq" },
+    { name: "Promoções", href: "/produtos?categoria=promocoes" },
+    { name: "Sobre nós", href: "/#sobre-nos" },
+    { name: "Contato", href: "/contato" },
 ];
 
 export function Navbar() {

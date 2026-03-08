@@ -25,7 +25,7 @@ export default function Home() {
       <HeroBanners />
 
       {/* Social Proof / Trust Section */}
-      <SectionContainer className="bg-white">
+      <SectionContainer id="sobre-nos" className="bg-white">
         <SectionHeading
           title="Por que comprar na Xiaomi Plus?"
           subtitle="Mais de 1.000 clientes satisfeitos em Santa Cruz e região confiam em nosso trabalho."
