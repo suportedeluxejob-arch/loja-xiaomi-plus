@@ -1,5 +1,4 @@
 import { HeroBanners } from "@/components/layout/HeroBanners";
-import { HeroScrollDemo } from "@/components/ui/demo";
 import { PrimaryCTAButton } from "@/components/ui/PrimaryCTAButton";
 import { SecondaryCTAButton } from "@/components/ui/SecondaryCTAButton";
 import { SectionContainer } from "@/components/layout/SectionContainer";
@@ -24,9 +23,6 @@ export default function Home() {
       <LocalBusinessSchema />
 
       <HeroBanners />
-
-      {/* Hero Scroll Demo */}
-      <HeroScrollDemo />
 
       {/* Social Proof / Trust Section */}
       <SectionContainer id="sobre-nos" className="bg-white">
