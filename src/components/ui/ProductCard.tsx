@@ -57,15 +57,22 @@ export function ProductCard({
                     </p>
                 </Link>
 
-                <div className="mt-4 pt-1">
-                    <Button
-                        variant="primary"
-                        className="w-full text-xs font-bold py-2 gap-2"
-                        onClick={() => addToCart(product)}
+                <div className="mt-4 pt-1 z-20">
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            addToCart(product);
+                        }}
+                        className="relative w-full overflow-hidden rounded-xl bg-[#ff6900] px-4 py-2.5 text-xs font-bold text-white shadow-[0_4px_14px_0_rgba(255,105,0,0.39)] transition-all duration-300 hover:shadow-[0_6px_20px_rgba(255,105,0,0.23)] hover:bg-[#ff8000] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2 cursor-pointer group/btn"
                     >
-                        <ShoppingCart className="w-4 h-4" />
-                        Adicionar ao Carrinho
-                    </Button>
+                        <ShoppingCart className="w-4 h-4 transition-transform duration-300 group-hover/btn:scale-110 group-hover/btn:-rotate-12" />
+                        <span className="relative z-10">Adicionar ao Carrinho</span>
+
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-150%)] group-hover/btn:duration-1000 group-hover/btn:[transform:skew(-12deg)_translateX(150%)]">
+                            <div className="relative h-full w-8 bg-white/20" />
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
