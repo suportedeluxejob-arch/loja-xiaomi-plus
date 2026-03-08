@@ -47,7 +47,7 @@ export function CartDrawer() {
                     </h2>
                     <button
                         onClick={() => setIsCartOpen(false)}
-                        className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500"
+                        className="cursor-pointer p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500"
                     >
                         <X className="w-5 h-5" />
                     </button>
@@ -84,7 +84,7 @@ export function CartDrawer() {
                                         </h3>
                                         <button
                                             onClick={() => removeFromCart(item.id)}
-                                            className="text-gray-400 hover:text-red-500 transition-colors p-1"
+                                            className="cursor-pointer text-gray-400 hover:text-red-500 transition-colors p-1"
                                         >
                                             <Trash2 className="w-4 h-4" />
                                         </button>
@@ -93,7 +93,7 @@ export function CartDrawer() {
                                         <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-2 py-1">
                                             <button
                                                 onClick={() => updateQuantity(item.id, -1)}
-                                                className="text-gray-500 hover:text-gray-900 transition-colors disabled:opacity-50"
+                                                className="cursor-pointer text-gray-500 hover:text-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                                 disabled={item.quantity <= 1}
                                             >
                                                 <Minus className="w-3 h-3" />
@@ -101,7 +101,7 @@ export function CartDrawer() {
                                             <span className="text-sm font-semibold w-4 text-center text-gray-800">{item.quantity}</span>
                                             <button
                                                 onClick={() => updateQuantity(item.id, 1)}
-                                                className="text-gray-500 hover:text-gray-900 transition-colors"
+                                                className="cursor-pointer text-gray-500 hover:text-gray-900 transition-colors"
                                             >
                                                 <Plus className="w-3 h-3" />
                                             </button>
@@ -117,13 +117,14 @@ export function CartDrawer() {
                     <div className="border-t border-gray-100 p-6 bg-white flex flex-col gap-4">
                         <Button
                             variant="primary"
-                            className="w-full py-6 text-lg rounded-2xl"
+                            className="w-full py-6 text-lg rounded-2xl cursor-pointer shadow-[0_8px_30px_-4px_rgba(255,105,0,0.5)] transition-all duration-300 hover:shadow-[0_12px_30px_-4px_rgba(255,105,0,0.6)] hover:bg-[#ff8000] hover:-translate-y-1 active:translate-y-0 active:scale-[0.98]"
                             onClick={handleCheckout}
                         >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" /><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" /></svg>
                             Finalizar Pedido no WhatsApp
                         </Button>
                         <button
-                            className="text-sm font-medium text-gray-400 hover:text-gray-700 mx-auto transition-colors"
+                            className="cursor-pointer text-sm font-medium text-gray-400 hover:text-gray-700 mx-auto transition-colors"
                             onClick={clearCart}
                         >
                             Esvaziar carrinho

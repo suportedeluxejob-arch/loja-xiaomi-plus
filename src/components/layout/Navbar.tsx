@@ -48,15 +48,15 @@ export function Navbar() {
 
                 {/* Right Actions Section */}
                 <div className="flex items-center gap-4 sm:gap-6 text-gray-600">
-                    <button className="hover:text-[#ff6900] transition-colors">
+                    <button className="cursor-pointer hover:text-[#ff6900] transition-colors">
                         <Search className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
-                    <button className="hover:text-[#ff6900] transition-colors hidden sm:block">
+                    <button className="cursor-pointer hover:text-[#ff6900] transition-colors hidden sm:block">
                         <User className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
                     <button
                         onClick={() => setIsCartOpen(true)}
-                        className="relative hover:text-[#ff6900] transition-colors"
+                        className="cursor-pointer relative hover:text-[#ff6900] transition-colors"
                     >
                         <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
                         {cartCount > 0 && (
@@ -68,7 +68,7 @@ export function Navbar() {
 
                     {/* Mobile Menu Toggle */}
                     <button
-                        className="flex md:hidden ml-2"
+                        className="cursor-pointer flex md:hidden ml-2"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Toggle Menu"
                     >
