@@ -32,18 +32,18 @@ export function HeroBanners() {
                 {/* Main Large Banner Carousel */}
                 <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-md mb-4 aspect-[21/9] sm:aspect-[3/1] lg:aspect-[3.2/1] flex items-center group cursor-pointer bg-neutral-900">
                     {/* Slide 0: The new image banner */}
-                    <div className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
+                    <Link href="/produtos" className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
                         <Image
                             src="/main-banner.jpg"
-                            alt="Banner Principal - Preços de Atacado"
+                            alt="Banner Principal - Lançamentos Exclusivos"
                             fill
                             className="object-cover object-center"
                             priority
                         />
-                    </div>
+                    </Link>
 
                     {/* Slide 1: The new secondary image banner */}
-                    <div className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
+                    <Link href="/produtos?categoria=Xiaomi" className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
                         <Image
                             src="/main-banner-2.jpg"
                             alt="Banner - 18 Meses de Garantia"
@@ -51,7 +51,7 @@ export function HeroBanners() {
                             className="object-cover object-center"
                             priority
                         />
-                    </div>
+                    </Link>
 
                     {/* Carousel Nav Arrows */}
                     <button

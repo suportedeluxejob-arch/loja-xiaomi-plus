@@ -8,7 +8,7 @@ import { Button } from "../ui/Button";
 import { useCart } from "@/contexts/CartContext";
 
 const navLinks = [
-    { name: "Lançamentos", href: "/produtos?categoria=lancamentos" },
+    { name: "Lançamentos", href: "/produtos" },
     { name: "Promoções", href: "/produtos?categoria=promocoes" },
     { name: "Sobre nós", href: "/#sobre-nos" },
     { name: "Contato", href: "/contato" },
