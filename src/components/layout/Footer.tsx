@@ -21,7 +21,7 @@ export function Footer() {
                             <span className="font-bold text-gray-900 text-xl tracking-tight">Xiaomi Plus</span>
                         </Link>
                         <p className="text-gray-500 font-medium text-sm max-w-xs leading-relaxed mt-2">
-                            Pela sua rua e praça, agora também a partir do site! Smartphones importados com garantia de Santa Cruz.
+                            A referência em smartphones importados em Santa Cruz. Aparelhos 100% originais com garantia, segurança e o atendimento premium que você merece.
                         </p>
                         <div className="flex items-center gap-3 mt-4">
                             <a
@@ -81,6 +81,11 @@ export function Footer() {
                             <li>
                                 <Link href="/contato" className="hover:text-[#ff6900] transition-colors">
                                     Contato
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/#sobre-nos" className="hover:text-[#ff6900] transition-colors">
+                                    Sobre Nós
                                 </Link>
                             </li>
 

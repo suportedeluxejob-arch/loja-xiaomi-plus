@@ -76,10 +76,12 @@ export function StoreLocationSection() {
                 <div className="relative mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 w-full px-4">
                     {/* Left Store Image */}
                     <div className="relative hidden md:block w-full md:w-[400px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border-[6px] border-white bg-gray-200 shrink-0">
-                        {/* Fallback pattern for Store Image Left */}
-                        <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold bg-gradient-to-br from-gray-200 to-gray-300">
-                            <span className="flex items-center gap-2">XP <br /> XIAOMI PLUS</span>
-                        </div>
+                        <Image
+                            src="/loja-1.jpg"
+                            alt="Fachada da loja Xiaomi Plus"
+                            fill
+                            className="object-cover transition-transform duration-700 hover:scale-105"
+                        />
                     </div>
 
                     {/* Center Location Pin Wrapper */}
@@ -120,10 +122,12 @@ export function StoreLocationSection() {
 
                     {/* Right Store Image */}
                     <div className="relative w-full md:w-[400px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border-[6px] border-white bg-gray-200 shrink-0 hidden md:block">
-                        {/* Fallback pattern for Store Image Right */}
-                        <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold bg-gradient-to-bl from-gray-200 to-gray-300">
-                            <span className="text-center">Interior <br /> da Loja</span>
-                        </div>
+                        <Image
+                            src="/loja-2.jpg"
+                            alt="Interior da loja Xiaomi Plus"
+                            fill
+                            className="object-cover transition-transform duration-700 hover:scale-105"
+                        />
                     </div>
                 </div>
 
