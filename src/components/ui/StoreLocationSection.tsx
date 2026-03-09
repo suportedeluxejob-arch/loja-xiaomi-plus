@@ -4,7 +4,7 @@ import { Shield, ThumbsUp, Medal, Star } from "lucide-react";
 
 export function StoreLocationSection() {
     return (
-        <section className="relative w-full overflow-hidden bg-gray-100 py-16 md:py-24 min-h-[800px]">
+        <section className="relative w-full overflow-hidden bg-gray-100 py-16 md:py-24 min-h-[550px] md:min-h-[700px]">
             {/* Real Google Maps Embedded Background */}
             <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
                 <iframe
@@ -15,7 +15,7 @@ export function StoreLocationSection() {
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="w-[150%] h-[150%] -translate-x-[25%] -translate-y-[25%] md:w-[120%] md:h-[120%] md:-translate-x-[10%] md:-translate-y-[10%]"
+                    className="w-[150%] h-[150%] -translate-x-[25%] -translate-y-[25%] md:w-[120%] md:h-[120%] md:-translate-x-[10%] md:-translate-y-[10%] pointer-events-none"
                 />
 
                 {/* Radial Gradient overlay to fade the map edges to the gray background */}
@@ -75,7 +75,7 @@ export function StoreLocationSection() {
                 {/* Center Store Images & Location Pin */}
                 <div className="relative mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 w-full px-4">
                     {/* Left Store Image */}
-                    <div className="relative w-full md:w-[400px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border-[6px] border-white bg-gray-200 shrink-0">
+                    <div className="relative hidden md:block w-full md:w-[400px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border-[6px] border-white bg-gray-200 shrink-0">
                         {/* Fallback pattern for Store Image Left */}
                         <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold bg-gradient-to-br from-gray-200 to-gray-300">
                             <span className="flex items-center gap-2">XP <br /> XIAOMI PLUS</span>
@@ -128,9 +128,10 @@ export function StoreLocationSection() {
                 </div>
 
                 {/* Mobile text for location */}
-                <div className="mt-8 text-center md:hidden">
-                    <h3 className="text-2xl font-bold text-gray-900">Santa Cruz, RJ</h3>
-                    <p className="text-gray-600 mt-2 text-sm max-w-[280px] mx-auto">Visite nossa loja para conhecer todos os modelos de perto e testar as câmeras!</p>
+                <div className="mt-8 text-center md:hidden relative z-20">
+                    <p className="text-gray-900 font-semibold text-sm max-w-[280px] mx-auto bg-white/70 backdrop-blur-md py-3 px-5 rounded-2xl shadow-sm border border-white">
+                        Visite nossa loja para conhecer todos os modelos de perto e testar as câmeras!
+                    </p>
                 </div>
             </div>
         </section>
