@@ -52,9 +52,9 @@ export function Footer() {
                             <li className="flex gap-4 items-start">
                                 <MapPin className="h-5 w-5 shrink-0 text-[#ff6900] mt-0.5" />
                                 <span className="leading-relaxed">
-                                    Clínicas/Espaço Bem Estar, sala X<br />
+                                    R. Gen. Olímpio, 120 - loja B<br />
                                     Santa Cruz, Rio de Janeiro - RJ<br />
-                                    Cep da região.
+                                    23550-242
                                 </span>
                             </li>
                             <li className="flex items-center gap-4">

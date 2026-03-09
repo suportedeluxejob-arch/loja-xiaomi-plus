@@ -1,15 +1,17 @@
 import React from "react";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Star } from "lucide-react";
 
 export function MobileStickyActions() {
     return (
         <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center bg-white md:hidden sm:hidden xs:flex border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
             <a
-                href="tel:+5521979544879"
+                href="https://www.google.com/search?q=xiaomi-plus&sca_esv=7425f1baa5b8ea4e&sxsrf=ANbL-n5FsiJOSjusZNfis99WnyU5zWn22Q%3A1773085684481&ei=9COvaf6LHbnD5OUPyveBwA4&biw=1517&bih=754#lrd=0x9bfb74782f3543:0xd228cef25f40d793,1,,,,"
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-14 flex-1 items-center justify-center gap-2 bg-white text-gray-700 font-bold text-sm border-r border-gray-100 hover:bg-gray-50 transition-colors"
             >
-                <Phone className="h-5 w-5" />
-                <span className="text-sm">Ligar</span>
+                <Star className="h-5 w-5" />
+                <span className="text-sm">Avaliações</span>
             </a>
             <a
                 href="https://wa.me/5521979544879?text=Olá,%20vim%20pelo%20site%20da%20Xiaomi%20Plus"
