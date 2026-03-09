@@ -42,43 +42,15 @@ export function HeroBanners() {
                         />
                     </div>
 
-                    {/* Slide 1: Original HTML Banner */}
-                    <div className={`absolute inset-0 transition-opacity duration-1000 bg-gradient-to-r from-indigo-900 via-purple-800 to-indigo-600 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
-                        {/* Abstract Shapes (Background overlay) */}
-                        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-                        <div className="absolute bottom-0 text-[180px] font-black right-10 text-white opacity-5 select-none pointer-events-none leading-none">XP</div>
-
-                        {/* Content */}
-                        <div className="relative z-10 w-full h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
-                            <div className="space-y-2 max-w-[60%]">
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight drop-shadow-sm">
-                                    <span className="block">PREÇOS DE</span>
-                                    <span className="block">ATACADO</span>
-                                </h2>
-                                <div className="inline-block mt-4 bg-[#ff6900] text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full shadow-lg">
-                                    Poupe no Atacado
-                                </div>
-                            </div>
-
-                            {/* Mock Phones Graphics (Right side absolute positioning) */}
-                            <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 h-[120%] w-[35%] flex items-center justify-center transform rotate-[-5deg] group-hover:scale-105 transition-transform duration-500 ease-out">
-                                {/* We simulate two overlapping cellphones with CSS styling instead of external images as per restrictions */}
-                                <div className="relative w-full h-[80%] rounded-2xl md:rounded-3xl bg-neutral-900 border-4 border-gray-800 shadow-2xl overflow-hidden transform -translate-x-4 translate-y-4">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-90"></div>
-                                </div>
-                                <div className="absolute top-1/2 -translate-y-1/2 w-full h-[85%] rounded-2xl md:rounded-3xl bg-neutral-900 border-4 border-gray-100 shadow-2xl overflow-hidden transform translate-x-8 -translate-y-2 z-10">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500"></div>
-                                </div>
-
-                                {/* Floating badges overlay */}
-                                <div className="absolute bottom-[10%] -left-8 bg-yellow-400 text-yellow-900 font-black text-lg p-2 rounded-xl shadow-xl transform -rotate-12 z-20">
-                                    %
-                                </div>
-                                <div className="absolute top-[20%] -right-4 bg-orange-500 text-white p-2 rounded-xl shadow-xl transform rotate-12 z-20">
-                                    🛍️
-                                </div>
-                            </div>
-                        </div>
+                    {/* Slide 1: The new secondary image banner */}
+                    <div className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
+                        <Image
+                            src="/main-banner-2.jpg"
+                            alt="Banner - 18 Meses de Garantia"
+                            fill
+                            className="object-cover object-center"
+                            priority
+                        />
                     </div>
 
                     {/* Carousel Nav Arrows */}
