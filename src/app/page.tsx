@@ -98,6 +98,7 @@ export default function Home() {
             description="O ecossistema perfeito. iPhones originais com garantia."
             href="/produtos?categoria=Apple"
             imageFallback="bg-gradient-to-tr from-gray-800 to-gray-600"
+            imageSrc="/cat-apple.jpg"
           />
           <CategoryCard
             title="Realme"
