@@ -12,7 +12,7 @@ export function Footer() {
                     <div className="flex flex-col gap-4">
                         <Link href="/" className="flex items-center gap-3">
                             <Image
-                                src="/xiaomi-plus-logo.png"
+                                src="/favicon.png"
                                 alt="Xiaomi Plus Logo"
                                 width={44}
                                 height={44}

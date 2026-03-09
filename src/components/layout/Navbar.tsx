@@ -34,7 +34,7 @@ export function Navbar() {
                 {/* Logo Section */}
                 <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
                     <Image
-                        src="/xiaomi-plus-logo.png"
+                        src="/favicon.png"
                         alt="Xiaomi Plus Logo"
                         width={44}
                         height={44}
