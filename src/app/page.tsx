@@ -88,7 +88,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <CategoryCard
             title="Xiaomi"
-            description="Os campeões de custo-benefício. Linhas Redmi e POCO."
+            description="Os campeões mundiais em custo-benefício e performance."
             href="/produtos?categoria=Xiaomi"
             imageFallback="bg-gradient-to-tr from-orange-600 to-orange-400"
             imageSrc="/cat-xiaomi.jpg"
@@ -105,12 +105,14 @@ export default function Home() {
             description="Potência e design arrojado para os mais exigentes."
             href="/produtos?categoria=Realme"
             imageFallback="bg-gradient-to-tr from-yellow-500 to-amber-500"
+            imageSrc="/cat-realme.jpg"
           />
           <CategoryCard
             title="Acessórios"
             description="Smartwatches, fones Bluetooth, cases e películas."
             href="/produtos?categoria=Acessórios"
             imageFallback="bg-gradient-to-tr from-emerald-600 to-teal-500"
+            imageSrc="/cat-acessorios.jpg"
           />
         </div>
       </SectionContainer>
