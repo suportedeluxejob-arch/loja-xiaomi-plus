@@ -10,6 +10,7 @@ import { ProductCard } from "@/components/ui/ProductCard";
 import { StoreLocationSection } from "@/components/ui/StoreLocationSection";
 import { FeatureItem } from "@/components/ui/FeatureItem";
 import { FinalCTASection } from "@/components/ui/FinalCTASection";
+import { AboutUsSection } from "@/components/ui/AboutUsSection";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import { getFeaturedProducts } from "@/lib/data/products";
 import { CheckCircle2, MapPin, Shield, Star, ThumbsUp, Medal } from "lucide-react";
@@ -24,8 +25,11 @@ export default function Home() {
 
       <HeroBanners />
 
+      {/* About Us Section */}
+      <AboutUsSection />
+
       {/* Social Proof / Trust Section */}
-      <SectionContainer id="sobre-nos" className="bg-white">
+      <SectionContainer className="bg-[#f8f9fa]">
         <SectionHeading
           title="Por que comprar na Xiaomi Plus?"
           subtitle="Mais de 1.000 clientes satisfeitos em Santa Cruz e região confiam em nosso trabalho."
