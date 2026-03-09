@@ -16,6 +16,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Xiaomi Plus | Smartphones Xiaomi, Apple e Realme",
   description: "Os melhores smartphones Xiaomi, Realme e iPhone originais, lacrados e com garantia em Santa Cruz, RJ.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
