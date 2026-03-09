@@ -83,24 +83,6 @@ export function AboutUsSection() {
                     </ul>
                 </div>
 
-                {/* Público */}
-                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col gap-3">
-                    <div className="flex items-center gap-3 mb-2">
-                        <HeartHandshake className="w-6 h-6 text-[#ff6900]" />
-                        <h3 className="font-bold text-lg text-gray-900">Nosso Público</h3>
-                    </div>
-                    <ul className="space-y-2 text-sm font-medium">
-                        <li className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#ff6900] mt-1.5 shrink-0" />
-                            Empresa que acolhe a comunidade LGBTQ+
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#ff6900] mt-1.5 shrink-0" />
-                            Espaço seguro e acolhedor para pessoas transgênero
-                        </li>
-                    </ul>
-                </div>
-
                 {/* Planejamento */}
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col gap-3">
                     <div className="flex items-center gap-3 mb-2">

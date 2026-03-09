@@ -83,11 +83,7 @@ export function Footer() {
                                     Contato
                                 </Link>
                             </li>
-                            <li>
-                                <Link href="/termos" className="hover:text-[#ff6900] transition-colors">
-                                    Visão da Empresa
-                                </Link>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
