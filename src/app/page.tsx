@@ -91,6 +91,7 @@ export default function Home() {
             description="Os campeões de custo-benefício. Linhas Redmi e POCO."
             href="/produtos?categoria=Xiaomi"
             imageFallback="bg-gradient-to-tr from-orange-600 to-orange-400"
+            imageSrc="/cat-xiaomi.jpg"
           />
           <CategoryCard
             title="Apple / iPhone"

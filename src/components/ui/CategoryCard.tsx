@@ -8,6 +8,7 @@ interface CategoryCardProps {
     description: string;
     href: string;
     imageFallback: string; // Since we don't have images yet, we'll use a CSS gradient/color fallback
+    imageSrc?: string;
 }
 
 export function CategoryCard({
@@ -15,6 +16,7 @@ export function CategoryCard({
     description,
     href,
     imageFallback,
+    imageSrc,
 }: CategoryCardProps) {
     // We'll map the background gradient based on the title to match Figma
     let glowingBg = "bg-[#ff6900]"; // Default orange
@@ -33,12 +35,23 @@ export function CategoryCard({
             {/* Glowing background blur effect simulating the mockup */}
             <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[220px] h-[220px] rounded-full blur-[70px] opacity-60 group-hover:opacity-80 transition-opacity duration-500 ${glowingBg}`} />
 
-            {/* Product Mockup Overlay (Simulated since no images) */}
+            {/* Product Image or Mockup Overlay */}
             <div className="absolute inset-0 flex items-center justify-center -translate-y-10">
-                <div className="w-[140px] h-[160px] bg-white rounded-3xl shadow-xl border-4 border-gray-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-gray-100 to-white" />
-                    <span className="font-black text-5xl text-gray-200 relative z-10">XP</span>
-                </div>
+                {imageSrc ? (
+                    <div className="w-[85%] h-[85%] relative transition-transform duration-500 group-hover:scale-105">
+                        <Image
+                            src={imageSrc}
+                            alt={title}
+                            fill
+                            className="object-contain drop-shadow-2xl"
+                        />
+                    </div>
+                ) : (
+                    <div className="w-[140px] h-[160px] bg-white rounded-3xl shadow-xl border-4 border-gray-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-gray-100 to-white" />
+                        <span className="font-black text-5xl text-gray-200 relative z-10">XP</span>
+                    </div>
+                )}
             </div>
 
             {/* Frosted Glass Overlay for Text */}
