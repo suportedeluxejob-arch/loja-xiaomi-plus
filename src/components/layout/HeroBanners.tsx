@@ -30,8 +30,7 @@ export function HeroBanners() {
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Main Large Banner Carousel */}
-                <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-md mb-4 aspect-[21/9] sm:aspect-[3/1] md:aspect-[4/1] flex items-center group cursor-pointer bg-neutral-900">
-
+                <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-md mb-4 aspect-[21/9] sm:aspect-[3/1] lg:aspect-[3.2/1] flex items-center group cursor-pointer bg-neutral-900">
                     {/* Slide 0: The new image banner */}
                     <div className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
                         <Image
